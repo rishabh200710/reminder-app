@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder App</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<style>
+  body{
+  width: 100%;
+  height: 100vh;
+  /* overflow: hidden; */
+  padding: 10px;
+  background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%);
+
+}
+  
+ 
+.wrapper{
+  background: #fff;
+  max-width: 400px;
+  width: 100%;
+  margin: 120px auto;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+  
+.wrapper header{
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+  
+  
+
+
+
+    .green {
+        color:lightgreen;
+    }
+    .red {
+        color:lightcoral;
+    }
+    .blue {
+        color:skyblue
+    }
+    #itemList { font-size: 1.5rem;}
+    .show { display: block;}
+    .hide { display: none;}
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>Reminder App</header>
+    
+  
+    <div class="container">
+        <div class="row">
+            <div class="col mx-auto col-md-8 mt-3 text-center">
+            <div class="alert align-items-center" id="message"></div>
+            <form id="itemForm" >
+                
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control"  id="itemInput" value="" placeholder="Please enter name...">
+                    <button class="btn btn-outline-primary">ADD ITEM</button>
+                </div>
+            </form>
+            <ul class="nav nav-tabs">
+                <li class="nav-item" data-type="all">
+                  <a class="nav-link active" href="#">All</a>
+                </li>
+                <li class="nav-item" data-type="todo">
+                  <a class="nav-link" href="#">To Do</a>
+                </li>
+                <li class="nav-item" data-type="done">
+                  <a class="nav-link" href="#">Completed</a>
+                </li>
+              </ul>
+            <!-- list items -->
+            <ul class="list-group list-group-flush" id="itemList"></ul>
+            <input type="hidden" id="filterType" value="all">
+            <input type="hidden" id="citem" value="">
+            </div>
+        </div>
+        
+    </div>
+  </div>
+    <script src="main.js"></script>
+    
+</body>
+</html>
+
